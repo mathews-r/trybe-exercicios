@@ -1,1 +1,1 @@
-# Repositório para exercícios da Trybe!
+## Repositório para exercícios da Trybe!
