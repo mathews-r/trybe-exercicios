@@ -7,10 +7,11 @@ ol {
 }
 
 .cordofundodaol li:nth-child(odd) {
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
-h1, h3 {
+h1,
+h3 {
     color: red;
 }
 
@@ -35,7 +36,28 @@ li em {
     background-color: pink;
 }
 
-.segundaul li:hover {
+#stack:hover {
+    color: orange;
     font-style: bold;
-    color: rgb(255, 0, 0);
+}
+
+#w3:hover {
+    color: green;
+    font-style: bold;
+}
+
+#mdn:hover {
+    color: black;
+    font-style: bold;
+}
+
+#devdocs:hover {
+    color: yellow;
+    font-style: bold;
+}
+
+
+#trybe:hover {
+    color: green;
+    font-style: bold;
 }
