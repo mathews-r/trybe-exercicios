@@ -1,0 +1,63 @@
+ol {
+    background-color: yellow;
+}
+
+.cordofundodaol li:nth-child(even) {
+    color: green;
+}
+
+.cordofundodaol li:nth-child(odd) {
+    text-transform: uppercase;
+}
+
+h1,
+h3 {
+    color: red;
+}
+
+h1 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+.primeiraul li:nth-child(-n+3) {
+    color: blue;
+}
+
+.java {
+    background-color: pink;
+}
+
+#stack:hover {
+    color: orange;
+    font-style: bold;
+}
+
+#w3:hover {
+    color: green;
+    font-style: bold;
+}
+
+#mdn:hover {
+    color: black;
+    font-style: bold;
+}
+
+#devdocs:hover {
+    color: yellow;
+    font-style: bold;
+}
+
+
+#trybe:hover {
+    color: green;
+    font-style: bold;
+}
