@@ -1,0 +1,91 @@
+body{
+    background-color: #DF9A57;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    text-align: center;
+    background-color: #FC7A57;
+    padding: 2px;
+}
+
+.cabecalho {
+    width: 500px;
+    text-align: center;
+    margin-left: 38%;
+}
+
+.nav-1 {
+   
+    display: inline-block;
+    width: 500px;
+    align-items: center;
+    margin-left: 38%;
+    height: 60px;
+    background-color: #DF9A57;
+   
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+    padding: 26px;
+    color: black;
+    text-decoration: none;
+    margin-top: 3px;
+   
+
+  }
+
+  a:hover {
+      color: #EEFC57;
+  }
+
+  a {
+      color: inherit;
+  }
+  .nav-links {
+      text-decoration: none;
+
+       }
+
+  .artigo-fatos {
+      background-color: #5E5B52;
+      color: #FFFFFF;
+      height: 189px;
+    
+     
+     
+  }
+
+  .artigo-informacoes {
+      border-radius: 10px;
+      background-color: #FCD757;
+      padding: 10px;
+      width: 900px;
+      
+        }
+
+  .tabela-aside {
+      text-align: left;
+      padding: 2px;
+    
+  }
+
+  .aside-bar {
+      background-color: #5E5B52;
+      position: absolute;
+      left: 63%;
+      top: 341px;
+      padding: 10px;
+      border-radius: 10px;
+      color: #FFFFFF;
+      height: 236.44px;
+        }
+
+  .imagem-stomatopoda {
+position: absolute;
+left: 1300px;
+top: 151px;
+
+  }      
