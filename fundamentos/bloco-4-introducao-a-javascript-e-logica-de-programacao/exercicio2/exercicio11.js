@@ -1,4 +1,4 @@
-let salarioBruto = 5300;
+let salarioBruto = 5200;
 const inss1 = salarioBruto * 0.08;
 const inss2 = salarioBruto * 0.09;
 const inss3 = salarioBruto * 0.11;
@@ -17,11 +17,11 @@ if (salarioBruto <= 1556.94) {
     console.log(salarioLiquido);
 } else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
     salarioLiquido = (salarioBruto - inss2) - ir2
-    console.log("Seu salário líquido é:");
+    console.log("Seu salário líquido é:"); + salarioLiquido
     console.log(salarioLiquido);
 } else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
     salarioLiquido = (salarioBruto - inss3) - ir3
-    console.log("Seu salário líquido é:");
+    console.log("Seu salário líquido é:"); + salarioLiquido
     console.log(salarioLiquido);
 } else if (salarioBruto >= 5189.83 && salarioBruto < 5235.55) {
     salarioLiquido = (salarioBruto - inss4) - ir4
