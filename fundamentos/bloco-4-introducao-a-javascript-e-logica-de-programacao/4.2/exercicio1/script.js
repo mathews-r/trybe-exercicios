@@ -47,34 +47,12 @@
 
 // exercicio maior e menor palavra
 
-let array = ['java', 'javaScript', 'python', 'html', 'css'];
-
+let array = ['java', 'javaScript', 'phyton', 'html', 'css'];
 let maiorPalavra = array[0];
-let resultado = "";
 
-for (let index = 0; index < array.length; index += 1) {
-     if (array[index].length >  maiorPalavra){
-         maiorPalavra = array[index].length;
-     } 
-    
-} console.log(maiorPalavra);
-// for (let index2 = 0; index2 < array.length; index2 += 1){
-//     if(array[index2].length == maiorPalavra){
-//         resultado = maiorPalavra;
-//     }
-// }console.log(resultado);
-
-
-
-// Exercicio numeros primos
-
-// let primos = [];
-// let n = 50;
-
-// for (let index = 0; index <= n; index +=1);{
-//     primos[index] = index + 1;
-// }
-//     console.log(primos);
-//   // if (index % primos === 0 ) {
-
-    
+for (let index = 0; index < array.length; index+=1){
+    if (array[index] > maiorPalavra){
+        maiorPalavra = array[index]
+    }
+}
+console.log(maiorPalavra);    
