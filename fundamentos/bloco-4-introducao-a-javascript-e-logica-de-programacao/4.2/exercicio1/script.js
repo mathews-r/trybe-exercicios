@@ -47,12 +47,22 @@
 
 // exercicio maior e menor palavra
 
-let array = ['java', 'javaScript', 'phyton', 'html', 'css'];
-let maiorPalavra = array[0];
+let array = ['java', 'javascript', 'python', 'html', 'css'];
 
-for (let index = 0; index < array.length; index+=1){
-    if (array[index] > maiorPalavra){
-        maiorPalavra = array[index]
-    }
+let maiorPalavra = array[0];
+let menorPalavra = array[0];
+
+for (let index = 0; index < array.length; index += 1) {
+  if (array[index].length > maiorPalavra.length) {
+    maiorPalavra = array[index];
+  }
 }
-console.log(maiorPalavra);    
+
+for (let index = 0; index < array.length; index += 1) {
+  if (array[index].length < menorPalavra.length) {
+    menorPalavra = array[index];
+  }
+}
+
+console.log(maiorPalavra);
+console.log(menorPalavra);  
