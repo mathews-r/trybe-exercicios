@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script>
+        // 1 - ADICIONANDO H1
+            let title = document.getElementsByTagName('body')[0];
+            let titulo = document.createElement('h1');
+            titulo.innerText = "Exercício 5.2 - JavaScript DOM";
+            title.appendChild(titulo);
+
+        // 2 - ADICIONANDO TAG MAIN E CLASSNAME
+
+        let main = document.createElement('main');
+        main.className = 'main-content';
+        title.appendChild(main);
+
+        // 3 - ADICIONANDO TAG SECTION DENTRO DA MAIN
+
+        let principal = document.getElementsByTagName('main')[0];
+        let sessao = document.createElement('section');
+        sessao.className = "center-content";
+        principal.appendChild(sessao);
+
+        // 4 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+
+        let paragraph = document.getElementsByTagName('section')[0];
+        let paragrafo = document.createElement('p');
+        paragrafo.innerText = "Estou aprendendo a fazer modificações no HTML utilizando o DOM, o conteúdo está muito legal porque agora está ficando cada vez mais dinâmico.";
+        paragraph.appendChild(paragrafo);
+
+        // 5 - Adicione a tag section com a classe left-content como filho da tag main criada no passo 2
+
+        let sessao2 = document.createElement('section');
+        sessao2.className = "left-content";
+        main.appendChild(sessao2);
+
+        // 6 - Adicione a tag section com a classe right-content como filho da tag main criada no passo 2
+
+        let sessao3 = document.createElement('section');
+        sessao3.className = "right-content";
+        main.appendChild(sessao3);
+
+        // 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . 
+        // Esse elemento deve ser filho do section criado no passo 5
+
+        let img = document.createElement('img');
+        img.src = "https://picsum.photos/200";
+        img.className = "small-image";
+        sessao2.appendChild(img);
+
+
+    </script>
+  </body>
+</html>
