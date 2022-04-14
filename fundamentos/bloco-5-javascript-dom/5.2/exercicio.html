@@ -60,9 +60,10 @@
     <script>
         // 1 - ADICIONANDO H1
             let title = document.getElementsByTagName('body')[0];
-            let titulo = document.createElement('h1');
-            titulo.innerText = "Exercício 5.2 - JavaScript DOM";
-            title.appendChild(titulo);
+              let titulo = document.createElement('h1');
+              titulo.className = 'title';
+              titulo.innerText = "Exercício 5.2 - JavaScript DOM";
+              title.appendChild(titulo);
 
         // 2 - ADICIONANDO TAG MAIN E CLASSNAME
 
@@ -75,6 +76,7 @@
         let principal = document.getElementsByTagName('main')[0];
         let sessao = document.createElement('section');
         sessao.className = "center-content";
+        sessao.style.backgroundColor = "green";
         principal.appendChild(sessao);
 
         // 4 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
@@ -94,6 +96,7 @@
 
         let sessao3 = document.createElement('section');
         sessao3.className = "right-content";
+        sessao3.style.marginRight = 'auto';
         main.appendChild(sessao3);
 
         // 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . 
@@ -110,13 +113,17 @@
         let uList = document.createElement('ul');
         let lista = document.getElementsByTagName('ul')[0];
         let item = document.createElement('li');
+        
          sessao3.appendChild(uList);
 
         // 9 - Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
 
         let cabecalho1 = document.createElement('h3');
+        cabecalho1.className = "description";
         let cabecalho2 = document.createElement('h3');
+        cabecalho2.className = "description";
         let cabecalho3 = document.createElement('h3');
+        cabecalho3.className = "description";
 
         principal.appendChild(cabecalho1);
         principal.appendChild(cabecalho2);
