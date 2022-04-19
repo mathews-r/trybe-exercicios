@@ -58,3 +58,36 @@ function createDaysOfTheWeek() {
         feriado.appendChild(botao);
     }
     holydays('Feriados');
+
+    // EXERCICIO 3
+
+    function botaoFeriado() {
+      let btnFeriado = document.querySelector('.btn-holiday');
+      let feriadosDez = document.querySelectorAll('days-container');
+
+      btnFeriado.addEventListener('click', function () {
+        for (let index = 0; index < feriadosDez.length; index += 1) {
+          if (feriadosDez[index].style.backgroundColor === "#eee") {
+            feriadosDez[index].style.backgroundColor = "red";
+          } else {
+            feriadosDez[index].style.backgroundColor = "#eee";
+          }
+        }
+      });
+    }
+    botaoFeriado();
+
+    // EXERCICIO 4
+
+    function sextou() {
+        let btnSexta = document.createElement('button');
+        let feriado = document.querySelector('.buttons-container');
+
+        btnSexta.id = "btn-friday";
+        btnSexta.innerText = "Sexta-feira";
+        feriado.appendChild(btnSexta);
+
+
+
+    }
+    sextou('Sexta-feira');
