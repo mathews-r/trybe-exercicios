@@ -25,21 +25,21 @@ function createDaysOfTheWeek() {
 
       if (arrayDias === 24 || arrayDias === 31) {
         itemDia.className = "day holyday";
-        itemDia.innerText = arrayDias;
+        itemDia.innerHTML = arrayDias;
         dias.appendChild(itemDia);
 
       } else if (arrayDias === 4 || arrayDias === 11 || arrayDias === 18) {
         itemDia.className = "day friday";
-        itemDia.innerText = arrayDias;
+        itemDia.innerHTML = arrayDias;
         dias.appendChild(itemDia);
 
       } else if (arrayDias === 25) {
         itemDia.className = "day holyday friday";
-        itemDia.innerText = arrayDias;
+        itemDia.innerHTML = arrayDias;
         dias.appendChild(itemDia);
 
       } else {
-        itemDia.innerText = arrayDias;
+        itemDia.innerHTML = arrayDias;
         itemDia.className = 'day';
         dias.appendChild(itemDia);
 
@@ -86,8 +86,47 @@ function createDaysOfTheWeek() {
         btnSexta.id = "btn-friday";
         btnSexta.innerText = "Sexta-feira";
         feriado.appendChild(btnSexta);
-
-
-
     }
     sextou('Sexta-feira');
+
+      // EXERCICIO 5
+    function displayFridays(fridaysArray) {
+      let getFridayButton = document.querySelector('#btn-friday');
+      let fridays = document.getElementsByClassName('friday');
+      let newFridayText = 'SEX-TA FEIRA';
+    
+      getFridayButton.addEventListener('click', function() {
+      for (let index = 0; index < fridays.length; index += 1) {
+        if (fridays[index].innerHTML !== newFridayText) {
+            fridays[index].innerHTML = newFridayText;
+        } else {
+            fridays[index].innerHTML = fridaysArray[index];
+          }
+        }
+      })
+    };
+    
+    let dezFridays = [ 4, 11, 18, 25 ];
+    displayFridays(dezFridays);
+
+    // EXERCICIO 6
+
+    function efeitoZoomIn() {
+      let dias = document.querySelector("#days");
+
+      dias.addEventListener("mouseover", function (event) {
+        event.target.style.fontSize = "30px";
+        event.target.style.fontWeight = "600";
+      });
+    }
+    function efeitoZoomOut() {
+      let dias = document.querySelector("#days");
+      
+      dias.addEventListener("mouseout", function (event) {
+        event.target.style.fontSize = "20px";
+        event.target.style.fontWeight = "200";
+      });
+    }
+
+    efeitoZoomIn();
+    efeitoZoomOut();
