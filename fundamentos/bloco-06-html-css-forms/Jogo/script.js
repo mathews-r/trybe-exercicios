@@ -31,6 +31,15 @@ function criaBoard() {
   for (let index = 0; index < 9; index += 1) {
     const board = document.getElementById('tabela');
     const pixel = document.createElement('div');
+    pixel.addEventListener('click', function(){
+      if(selecionaX.className === 'selected') {
+        pixel.style.backgroundColor = 'orange';
+        pixel.innerText = 'X'
+      } else {
+        pixel.style.backgroundColor = 'blueviolet';
+        pixel.innerText = 'O'
+      }
+    });
     pixel.className = 'pixel';
     board.appendChild(pixel);
   }
@@ -45,4 +54,10 @@ let botaoClear = document.createElement("button");
 botaoClear.id = "botaoClear";
 botaoClear.innerText = "Jogar Novamente";
 clear.appendChild(botaoClear);
+
+botaoClear.addEventListener('click', function(){
+  location.reload();
+});
+
+
 
