@@ -16,7 +16,7 @@ h1 {
     padding: 15px;
 }
 
-#selecionar {
+.selecionar {
   border: 1px solid orange;
 }
 
@@ -45,6 +45,23 @@ h1 {
   cursor: pointer;
 }
 
+#tabela {
+  width: 188px;
+  height: 190px;
+  border: 4px solid blueviolet;
+  position: absolute;
+  margin-left: 817px;
+  margin-top: 100px;
+}
+
+.pixel {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 0px;
+}
+
 p {
   text-align: center;
 }
@@ -52,7 +69,7 @@ p {
 #botaoClear {
   position: absolute;
   margin-left: 838px;
-  margin-top: 100px;
+  margin-top: 320px;
   background-color: orange;
   font-size: 18px;
   color: white;
@@ -61,4 +78,12 @@ p {
   padding: 5px auto;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#footer {
+  margin-top: 40%;
+}
+
+.selected {
+  background-color: orange;
 }

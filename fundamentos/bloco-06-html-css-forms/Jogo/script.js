@@ -1,42 +1,48 @@
 // CRIAR MENU DE ESCOLHA X OU O.
 
-let divSelector = document.getElementById('selecionar');
-let selecionaX = document.createElement('div');
-selecionaX.id = 'divEscolherX';
-selecionaX.innerText = 'X';
+let divSelector = document.getElementById("selecionar");
+let selecionaX = document.createElement("div");
+selecionaX.id = "divEscolherX";
+selecionaX.className = 'selected';
+selecionaX.innerText = "X";
 divSelector.appendChild(selecionaX);
 
-let selecionaO = document.createElement('div');
-selecionaO.id = 'divEscolherO';
-selecionaO.innerText = 'O';
+let selecionaO = document.createElement("div");
+selecionaO.id = "divEscolherO";
+selecionaO.innerText = "O";
 divSelector.appendChild(selecionaO);
 
 // EVENTO AO CLICAR EM X OU O.
 
-let x = document.getElementById('divEscolherX');
+const seletor = document.querySelectorAll(".selec");
+function selectXorO() {
+  for (let i = 0; i < seletor.length; i += 1) {
+    seletor[i].addEventListener("click", function (event) {
+      document.querySelector(".selected").classList.remove("selected");
+      event.target.classList.add("selected");
+    });
+  }
+}
+selectXorO();
 
-x.addEventListener('click', function(){
-selecionaX.style.backgroundColor = 'orange';
-});
 
 // CRIAR BOARD.
-
-for(let index = 0; index < tabela.length; index += 1){
-    
+function criaBoard() {
+  for (let index = 0; index < 9; index += 1) {
+    const board = document.getElementById('tabela');
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    board.appendChild(pixel);
+  }
 }
-
-
+criaBoard();
 
 
 // CRIAR BOTAO JOGAR NOVAMENTE.
 
-let clear = document.getElementById('reniciar');
-let botaoClear = document.createElement('button');
-botaoClear.id = 'botaoClear';
-botaoClear.innerText = 'Jogar Novamente';
+let clear = document.getElementById("reniciar");
+let botaoClear = document.createElement("button");
+botaoClear.id = "botaoClear";
+botaoClear.innerText = "Jogar Novamente";
 clear.appendChild(botaoClear);
 
-function limparBoard(){
-  board.style.backgroundColor = 'white';
-}; 
-limparBoard();
