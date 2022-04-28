@@ -1,0 +1,64 @@
+*{
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+body {
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: rgb(85, 39, 211);
+    padding: 15px;
+}
+
+#selecionar {
+  border: 1px solid orange;
+}
+
+#divEscolherX {
+  border: 2px solid gray;
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  margin-left: 825px;
+  margin-top: 30px;
+  line-height: 3em;
+  cursor: pointer;
+}
+
+
+#divEscolherO {
+  border: 2px solid gray;
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  margin-left: 925px;
+  margin-top: 30px;
+  line-height: 3em;
+  cursor: pointer;
+}
+
+p {
+  text-align: center;
+}
+
+#botaoClear {
+  position: absolute;
+  margin-left: 838px;
+  margin-top: 100px;
+  background-color: orange;
+  font-size: 18px;
+  color: white;
+  height: 40px;
+  width: 160px;
+  padding: 5px auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
