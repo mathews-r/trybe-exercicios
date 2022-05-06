@@ -6,6 +6,8 @@ html {
   box-sizing: inherit;
 }
 
+
+
 @media screen and (max-width: 440px) {
   .aside-one {
   text-align: center;
@@ -73,4 +75,8 @@ header ul {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 1px;
   }
+}
+
+@media screen and (min-width: 441px) { 
+
 }
