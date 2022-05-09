@@ -19,6 +19,8 @@
     function fail() {
       if(document.getElementById('value1').value === '' || document.getElementById('value2').value === '') {
         throw new Error('Você precisa digitar os dois valores.');
+      } if (isNaN() === true) {
+        throw new Error('Este campo só aceita números.');
       }
     }
 
