@@ -20,34 +20,59 @@ const dragon = {
 
 const battleMembers = { mage, warrior, dragon };
 
-const dragonDamage = () => {
+const dragonDamage = (dragon) => {
   let danoDragao = Math.floor(Math.random() * (dragon.strength - 15 + 1) + 15);
   return danoDragao;
 }
-dragonDamage();
 
-const warriorDamage = () => {
+const warriorDamage = (warrior) => {
   const danoMaximo = warrior.strength * warrior.weaponDmg;
   const danoMinimo = warrior.strength;
   let danoWarrior = Math.floor(Math.random() * (danoMaximo - danoMinimo + 1) + danoMinimo);
   return danoWarrior;
 }
-warriorDamage();
 
-const mago = () => {
-  const danoMaximo = mage.intelligence * 2;
+const magoDamage = (mage) => {
+  const manaMage = mage.mana;
   const danoMinimo = mage.intelligence;
-  let mana = mage.mana;
-  let danoMago = Math.floor(Math.random() * (danoMaximo - danoMinimo + 1) + danoMinimo);
-  if (mana >= 15) {
-    mana -= 15;
-  } else {
-    return 'Você não tem mana suficiente.'
-  }
+  const danoMaximo = mage.intelligence * 2;
+  const turno = {
+    mana: 0,
+    damage: 0,
+  };
 
-  return console.log({
-    dano: danoMago,
-    mana: mana
-  });
+  if (manaMage > 15) {
+    const danoMago = Math.floor(Math.random() * (danoMaximo - danoMinimo + 1) + danoMinimo);
+      turno.damage = danoMago;
+      turno.mana = 15;
+      return turno;
+};
+return turno;
 }
-mago();
+
+const gameActions = {
+    turnWarrior: (warriorDamage) => {
+      const a = warriorDamage(warrior);
+    warrior.damage = a;
+    dragon.healthPoints -= a;
+  },
+    turnMage: (magoDamage) => {
+      const b = magoDamage(mage);
+      const d = b.damage;
+    mage.damage = d;
+    mage.mana -= d.mana;
+    dragon.healthPoints -= d;
+    },
+    turnDragon: (dragonDamage) => {
+      const c = dragonDamage(dragon);
+    warrior.healthPoints -= c;
+    mage.healthPoints -= c;
+    dragon.damage = c;
+    },
+    resultadoTurno: () => battleMembers,
+  };
+
+gameActions.turnWarrior(warriorDamage);
+gameActions.turnMage(magoDamage);
+gameActions.turnDragon(dragonDamage);
+console.log(gameActions.resultadoTurno());
