@@ -111,3 +111,11 @@ function fantasyOrScienceFictionAuthors(array) {
 }
 
 console.log(fantasyOrScienceFictionAuthors(books));
+
+// Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+function oldBooks(array) {
+  return array.filter( (book) => book.releaseYear <= (2022 -60)).map((livro) => livro.name);
+}
+
+console.log(oldBooks(books));
