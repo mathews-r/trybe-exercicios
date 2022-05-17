@@ -119,3 +119,13 @@ function oldBooks(array) {
 }
 
 console.log(oldBooks(books));
+
+// Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+
+function authorWith3DotsOnName(array) {
+  return array.find( (autor) => {
+    autor.author.name.contains('.')
+  })
+}
+
+console.log(authorWith3DotsOnName(books));
