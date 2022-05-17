@@ -91,3 +91,23 @@ function fantasyOrScienceFiction(array) {
 }
 
 console.log(fantasyOrScienceFiction(books));
+
+// Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
+// (.filter .sort)
+
+function oldBooksOrdered(array) {
+  return array.filter( (oldBook) => oldBook.releaseYear <= (2022 - 60)).sort( (a, b) => {
+    a.releaseYear - b.releaseYear
+  });
+}
+
+console.log(oldBooksOrdered(books));
+
+// Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+
+function fantasyOrScienceFictionAuthors(array) {
+  const wantedGenres = ['Fantasia', 'Ficção Científica'];
+  return array.filter( (autor) =>  wantedGenres.includes(autor.genre)).map((book) => book.author.name).sort();
+}
+
+console.log(fantasyOrScienceFictionAuthors(books));
