@@ -1,23 +1,29 @@
-const criptos = async () => {
-  const url = `https://api.coincap.io/v2/assets`;
+const append = (data) => {
+  const filtro = data.filter(({ rank }) => rank <= 10);
+  const tratarFiltro = filtro.map(({ name, symbol, priceUsd }) => ({
+    name,
+    symbol,
+    priceUsd,
+  }));
 
-  const coins = await fetch(url)
-    .then((response) => response.json())
-    .then((cripto) => cripto.data);
-  return coins;
-};
+  const container = document.getElementById("lista-cripto");
 
-const append = async () => {
-  const moeda = await criptos();
-
-  const uList = document.getElementById("lista-cripto");
-
-  moeda.map((coin) => {
+  tratarFiltro.forEach(({ name, symbol, priceUsd }) => {
+    const dollar = Number(priceUsd).toFixed(2);
     const createLi = document.createElement("li");
-    const dollar = Number(coin.priceUsd);
-    createLi.innerText = `${coin.name} (${coin.symbol}): ${dollar.toFixed(2)}`;
-    uList.appendChild(createLi);
+    createLi.innerText = `${name} (${symbol}): U$: ${dollar}`;
+    container.appendChild(createLi);
   });
 };
 
-window.onload = () => append();
+const criptos = async () => {
+  try {
+    const coins = await fetch(`https://api.coincap.io/v2/assets`);
+    const dados = await coins.json();
+    append(dados.data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+criptos();
